@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-^6-r7dqeabaf3cclgq&=%8sj=p&+)s1y6k2aih3l=b#ilg!4nq
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.vercel.app', '127.0.0.1']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -43,9 +43,6 @@ INSTALLED_APPS = [
     'live_session',
 ]
 
-
-MEDIA_URL = '/media/'
-MEDIA_ROOT = BASE_DIR / "media"
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -84,8 +81,12 @@ WSGI_APPLICATION = 'backend.wsgi.app'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'app-math',
+        'USER': 'postgres',
+        'PASSWORD': '9003JessI@@@',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 
@@ -130,6 +131,10 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
+STATIC_ROOT = Path(BASE_DIR).resolve()/"staticfiles_build"
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / "media"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field

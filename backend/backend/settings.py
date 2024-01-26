@@ -81,12 +81,8 @@ WSGI_APPLICATION = 'backend.wsgi.app'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'app-math',
-        'USER': 'postgres',
-        'PASSWORD': '9003JessI@@@',
-        'HOST': 'localhost',
-        'PORT': '5432',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 

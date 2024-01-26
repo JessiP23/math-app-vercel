@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-^6-r7dqeabaf3cclgq&=%8sj=p&+)s1y6k2aih3l=b#ilg!4nq
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.vercel.app', 'math-app-2323.vercel.app', '127.0.0.8000', '127.0.0.1', 'localhost', '.now.sh']
+ALLOWED_HOSTS = ['.vercel.app', 'math-app-2323.vercel.app', '127.0.0.1']
 
 
 # Application definition
@@ -84,12 +84,8 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'app-math',
-        'USER': 'postgres',
-        'PASSWORD': '9003JessI@@@',
-        'HOST': 'localhost',
-        'PORT': '5432',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 

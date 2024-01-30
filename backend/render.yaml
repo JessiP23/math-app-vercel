@@ -1,2 +1,0 @@
-buildCommand: bash build.sh
-pythonVersion: 3.12
